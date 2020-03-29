@@ -1,0 +1,18 @@
+opencar();
+function opencar()
+    carro = imread('A5.jpg');
+%   imshow(carro);
+    size(carro)
+    carrogray = rgb2gray(carro);
+    subplot(3,1,1);imshow(carro); subplot(3,1,2); imshow(carrogray);
+    carrogray2 = [carrogray;zeros(10,300)];
+    carrogray2 = [carrogray2,zeros(178,10)];
+    size(carrogray2)
+    carrogray2 = [zeros(10,310);carrogray2];
+    carrogray2 = [zeros(188,10)carrogray2];
+    carrogray2(70:80,:) = 0;
+%   carrogray2(5:15,:) = 0; carrogray2(150:160,:) = 255;
+%   carrogray(168:178,:) = 0; carrogray(:,300:310);
+    
+    subplot(3,1,3); imshow(carrogray2)
+end
